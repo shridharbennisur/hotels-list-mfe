@@ -1,7 +1,7 @@
 {
-    "name": "mfe1",
+    "name": "hotels-list-mfe",
     "version": "1.0.0",
-    "description": "Micro Frontend MFE1",
+    "description": "Micro Frontend hotel list",
     "main": "dist/bundle.js",
     "scripts": {
       "dev": "webpack serve --mode development",
