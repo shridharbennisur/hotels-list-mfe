@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "https://mfe1.vercel.app/" // Change for different MFEs
+    publicPath: "https://hotels-list.vercel.app/" // Change for different MFEs
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
@@ -24,10 +24,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "mfe1",
+      name: "hotels-list",
       filename: "remoteEntry.js",
       exposes: {
-        "./MFEComponent": "./src/components/MFEComponent"
+        "./HotelList": "./src/components/HotelList"
       },
       shared: ["react", "react-dom"]
     }),
