@@ -1,1 +1,1 @@
-# hotels-list-mfe
+# hotels_list_mfe

@@ -1,10 +1,9 @@
 import React from "react";
 
-const MFEComponent = ({ title, color, mode }: { title: string; color: string; mode: string }) => {
+const MFEComponent = ({ title, color }: { title: string; color: string; }) => {
   return (
     <div style={{ padding: 20, background: color }}>
       <h2>{title}</h2>
-      <p>Mode: {mode}</p>
     </div>
   );
 };

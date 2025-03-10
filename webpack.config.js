@@ -1,6 +1,7 @@
 const path = require("path");
 const { ModuleFederationPlugin } = require("webpack").container;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { dependencies  } = require("./package.json");
 
 module.exports = {
   mode: "production",
@@ -8,7 +9,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "https://hotels-list-mfe.vercel.app/" // Change for different MFEs
+    publicPath: "auto"
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
@@ -24,12 +25,15 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "hotels-list-mfe",
+      name: "hotels_list_mfe",
       filename: "remoteEntry.js",
       exposes: {
         "./HotelList": "./src/components/HotelList"
       },
-      shared: ["react", "react-dom"]
+      shared: {
+        react: { singleton: true, requiredVersion: dependencies.react, eager: true },
+        "react-dom": { singleton: true, requiredVersion: dependencies['react-dom'], eager: true }
+      }
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html"

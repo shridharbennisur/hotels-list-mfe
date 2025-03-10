@@ -1,5 +1,5 @@
 {
-    "name": "hotels-list-mfe",
+    "name": "hotels_list_mfe",
     "version": "1.0.0",
     "description": "Micro Frontend hotel list",
     "main": "dist/bundle.js",
@@ -9,8 +9,8 @@
       "start": "serve -s dist"
     },
     "dependencies": {
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0"
+      "react": "18.2.0",
+      "react-dom": "18.2.0"
     },
     "devDependencies": {
       "@types/react": "^18.2.0",

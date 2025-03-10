@@ -4,7 +4,7 @@ import HotelList from "./components/HotelList";
 
 ReactDOM.render(
   <React.StrictMode>
-    <HotelList title="Micro Frontend 1" color="#ffdd57" mode="Standalone" />
+    <HotelList title="Hotel List micro front end" color="#ffdd57" />
   </React.StrictMode>,
   document.getElementById("root")
 );
